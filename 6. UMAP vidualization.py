@@ -40,4 +40,5 @@ plt.show()
 # result save
 npy_path = r"C:\Users\ehdgh\Desktop\Programs\python\CA_TM\061525_SBERT\pdf_cleaning_73\Markdown\Cleaned\output\embedding_2d.npy"
 np.save(npy_path, embedding_2d)
-print(f"✔ UMAP 결과 저장 완료: {npy_path}")
+print(f"Completed: {npy_path}")
+
