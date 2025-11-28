@@ -4,7 +4,7 @@ import pickle
 
 # SBERT Module
 model = SentenceTransformer('all-MiniLM-L6-v2')
-cleaned_folder = r"C:\Users\ehdgh\Desktop\Programs\python\CA_TM\061525_SBERT\pdf_cleaning_73\Markdown\Cleaned"
+cleaned_folder = r"C:__________________"
 
 # Output folder path
 output_folder = os.path.join(cleaned_folder, "output")
@@ -30,3 +30,4 @@ with open(output_path, "wb") as f:
     pickle.dump(embedding_output, f)
 
 print(f"Completed: {output_path}")
+
