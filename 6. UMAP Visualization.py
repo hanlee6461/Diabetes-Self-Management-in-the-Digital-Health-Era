@@ -4,7 +4,7 @@ import umap.umap_ as umap
 import matplotlib.pyplot as plt
 
 # Embedding output file path
-pkl_path = r"C:\Users\ehdgh\Desktop\Programs\python\CA_TM\061525_SBERT\pdf_cleaning_73\Markdown\Cleaned\output\embedding_output.pkl"
+pkl_path = r"C:________________________________________.pkl"
 
 with open(pkl_path, "rb") as f:
     embedding_output = pickle.load(f)
@@ -37,7 +37,3 @@ plt.ylabel("UMAP-2")
 plt.grid(True)
 plt.show()
 
-# result save
-npy_path = r"C:\Users\ehdgh\Desktop\Programs\python\CA_TM\061525_SBERT\pdf_cleaning_73\Markdown\Cleaned\output\embedding_2d.npy"
-np.save(npy_path, embedding_2d)
-print(f"Completed: {npy_path}")
