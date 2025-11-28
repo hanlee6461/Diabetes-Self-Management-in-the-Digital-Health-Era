@@ -13,8 +13,8 @@ import matplotlib.pyplot as plt
 import difflib
 
 # data paths
-PICKLE_PATH = r"C:\Users\ehdgh\Desktop\Programs\python\CA_TM\073025_SBERT\pdf_cleaning_73\Markdown\Cleaned\output\cluster3_data.pkl"
-TXT_DIR     = r"C:\Users\ehdgh\Desktop\Programs\python\CA_TM\073025_SBERT\pdf_cleaning_73\Markdown\Cleaned"
+PICKLE_PATH = r"C:________________________________________.pkl"
+TXT_DIR     = r"C:___________________________________"
 
 # Load Cluster 3 data
 with open(PICKLE_PATH, "rb") as f:
@@ -53,7 +53,7 @@ for sent, label in zip(cluster3_sentences, sub_labels):
 def normalize_text(s: str) :
     s = s.lower()
     s = re.sub(r"\s+", " ", s)
-    s = re.sub(r"[^\w\s]", " ", s)  # 문장부호 제거
+    s = re.sub(r"[^\w\s]", " ", s)  
     return s.strip()
 
 # Text files load
@@ -170,7 +170,7 @@ n_clusters_detected = len(set(sub_labels))
 for cluster_id in range(n_clusters_detected):
     cluster_indices = [i for i, lbl in enumerate(sub_labels) if lbl == cluster_id]
     if not cluster_indices:
-        print(f"\n❗ Cluster {cluster_id} is empty.")
+        print(f"\n Cluster {cluster_id} is empty.")
         continue
 
     cluster_embeddings = np.array([cluster3_embeddings[i] for i in cluster_indices])
@@ -189,4 +189,5 @@ for cluster_id in range(n_clusters_detected):
         sent = cluster_sentences[local_idx]
         cit  = sentence_to_citation(sent)
         print(f"{rank}. {sent} {cit}")
+
 
