@@ -15,11 +15,11 @@ rc('font', family=font_name)
 plt.rcParams['axes.unicode_minus'] = False
 
 # Embedding and sentence data load
-embedding_path = r"C:\Users\ehdgh\Desktop\Programs\python\CA_TM\061525_SBERT\pdf_cleaning_73\Markdown\Cleaned\output\embedding_2d.npy"
+embedding_path = r"C:________________________________________"
 embedding_2d = np.load(embedding_path)
 
 # Load the full embedding and sentences
-pkl_path = r"C:\Users\ehdgh\Desktop\Programs\python\CA_TM\061525_SBERT\pdf_cleaning_73\Markdown\Cleaned\output\embedding_output.pkl"
+pkl_path = r"C:________________________________________.pkl"
 with open(pkl_path, "rb") as f:
     embedding_output = pickle.load(f)
 
@@ -87,7 +87,7 @@ for sent, label in zip(all_sentences, cluster_labels):
 print("\n Sentence Count:")
 for cluster_id in sorted(cluster_examples.keys()):
     count = len(cluster_examples[cluster_id])
-    print(f" - Cluster {cluster_id}: {count} 문장")
+    print(f" - Cluster {cluster_id}: {count} ")
 
 
 ### Representative sentences per cluster (top 30 by cosine similarity) =========
@@ -161,5 +161,6 @@ plt.ylabel("UMAP-2")
 plt.grid(False)
 plt.tight_layout()
 plt.show()
+
 
 
