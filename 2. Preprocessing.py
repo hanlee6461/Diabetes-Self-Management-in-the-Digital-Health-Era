@@ -80,7 +80,7 @@ def preprocess_for_sbert(text, min_len=6, max_len=300):
     return [sent.text.strip() for sent in doc.sents if min_len <= len(sent.text.split()) <= max_len]
 
 # 7. Process Markdown files and save cleaned text
-markdown_folder = r"C:\Users\ehdgh\Desktop\Programs\python\CA_TM\061525_SBERT\pdf_cleaning_73\Markdown"
+markdown_folder = r"C:____________________"
 cleaned_folder = os.path.join(markdown_folder, "Cleaned")
 pathlib.Path(cleaned_folder).mkdir(parents=True, exist_ok=True)
 
@@ -104,3 +104,4 @@ for filename in os.listdir(markdown_folder):
 
         except Exception as e:
             print(f"Error: {filename} | Reason: {e}")
+
