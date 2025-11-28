@@ -16,7 +16,6 @@ plt.rcParams['axes.unicode_minus'] = False
 
 # Embedding and sentence data load
 embedding_path = r"C:________________________________________"
-embedding_2d = np.load(embedding_path)
 
 # Load the full embedding and sentences
 pkl_path = r"C:________________________________________.pkl"
@@ -161,6 +160,7 @@ plt.ylabel("UMAP-2")
 plt.grid(False)
 plt.tight_layout()
 plt.show()
+
 
 
 
