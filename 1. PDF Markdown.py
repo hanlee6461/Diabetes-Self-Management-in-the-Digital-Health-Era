@@ -3,7 +3,7 @@ import pymupdf4llm
 import pathlib
 
 # PDF Folder directory path
-pdf_folder = r"C:\Users\ehdgh\Desktop\Programs\python\CA_TM\060325\pdf_cleaning_73"
+pdf_folder = r"C:_______"
 # Markdown save directory path
 markdown_folder = os.path.join(pdf_folder, "Markdown")
 pathlib.Path(markdown_folder).mkdir(parents=True, exist_ok=True)
@@ -22,3 +22,4 @@ for file_name in os.listdir(pdf_folder):
             print(f"Completed: {file_name} → {base_name}.md")
         except Exception as e:
             print(f"Error: {file_name} | Reason : {e}")
+
