@@ -130,37 +130,3 @@ print_top_representatives_per_cluster(
     top_n=30
 )
 
-
-### Clustering Visualization
-import matplotlib.pyplot as plt
-import matplotlib.patches as mpatches
-import numpy as np
-from sklearn.cluster import KMeans
-from collections import defaultdict
-
-# Cluster color mapping
-n_clusters = 6
-unique_labels = np.unique(cluster_labels)
-cmap = plt.cm.get_cmap('tab10', n_clusters)
-colors = [cmap(i) for i in range(n_clusters)]  
-
-# label → color mapping
-label_to_color = {label: colors[i] for i, label in enumerate(unique_labels)}
-point_colors = [label_to_color[label] for label in cluster_labels]
-
-# Visualization
-plt.figure(figsize=(12, 8))
-plt.scatter(embedding_2d[:, 0], embedding_2d[:, 1], c=point_colors, s=5, alpha=0.6)
-
-# legend
-patches = [mpatches.Patch(color=label_to_color[label], label=f'Cluster {label}') for label in unique_labels]
-plt.legend(handles=patches, title="Cluster ID", bbox_to_anchor=(1.02, 1), loc='upper left')
-plt.xlabel("UMAP-1")
-plt.ylabel("UMAP-2")
-plt.grid(False)
-plt.tight_layout()
-plt.show()
-
-
-
-
